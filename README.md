@@ -51,3 +51,11 @@ TUGAS2/
 │
 ├── README.md                     # Dokumentasi repositori
 └── requirements.txt              # Daftar pustaka dependencies
+```
+
+🗂️ Dataset
+Dataset yang digunakan pada Modul 2 bersumber dari IBM Object Storage (Cognitive Class) yang memuat informasi konsumsi bahan bakar dan emisi dari berbagai model kendaraan.
+
+Tautan Unduhan Original: FuelConsumptionCo2.csv
+
+Fitur Utama yang Dianalisis: ENGINESIZE (Fitur/X) dan CO2EMISSIONS (Target/Y)
