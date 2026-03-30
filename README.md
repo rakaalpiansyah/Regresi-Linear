@@ -69,7 +69,7 @@ Pastikan Anda telah menginstal **Python 3.8+**. Berikut adalah langkah-langkah u
 1. **Clone repositori ini:**
    ```bash
    git clone <URL-GITHUB-ANDA>
-   cd Regresi Linear
+   cd Tugas2
    ```
 
 2. **Aktifkan Virtual Environment (Disarankan):**
