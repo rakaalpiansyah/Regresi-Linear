@@ -14,11 +14,11 @@ Proyek ini dibuat untuk memenuhi tugas eksplorasi praktikum Pembelajaran Mesin.
 ## 📑 Daftar Isi
 - [Deskripsi Proyek](#-deskripsi-proyek)
 - [Struktur Direktori](#-struktur-direktori)
-- [Dataset](#-dataset)
-- [Persiapan & Instalasi](#-persiapan--instalasi)
+- [Dataset](#️-dataset)
+- [Persiapan & Instalasi](#️-persiapan--instalasi)
 - [Cara Menjalankan Aplikasi](#-cara-menjalankan-aplikasi)
 - [Cuplikan Dashboard](#-cuplikan-dashboard-preview)
-- [Teknologi yang Digunakan](#-teknologi-yang-digunakan)
+- [Teknologi yang Digunakan](#️-teknologi-yang-digunakan)
 - [Referensi](#-referensi)
 
 ---
@@ -27,9 +27,9 @@ Proyek ini dibuat untuk memenuhi tugas eksplorasi praktikum Pembelajaran Mesin.
 Proyek ini mengimplementasikan dua eksperimen utama untuk memahami konsep dasar hingga penerapan riil dari algoritma Regresi Linier:
 
 1. **Modul 1: Data Sembarang (Dummy Data)**
-   Menganalisis hubungan sebab-akibat antara satu variabel bebas (X = Penjualan) terhadap variabel terikat (Y = Harga) menggunakan array sederhana. Tujuannya adalah memahami cara kerja *fitting* garis regresi secara fundamental.
+   Menganalisis hubungan sebab-akibat antara satu variabel bebas (`X = Penjualan`) terhadap variabel terikat (`Y = Harga`) menggunakan *array* sederhana. Tujuannya adalah memahami cara kerja *fitting* garis regresi secara fundamental.
 2. **Modul 2: Dataset Emisi Kendaraan (Real Data)**
-   Menggunakan dataset nyata untuk memprediksi tingkat emisi karbon dioksida (`CO2EMISSIONS`) dari sebuah kendaraan berdasarkan kapasitas atau ukuran mesinnya (`ENGINESIZE`). Model dievaluasi secara kuantitatif menggunakan metrik *Mean Squared Error* (MSE) dan koefisien determinasi (R-Squared).
+   Menggunakan dataset nyata untuk memprediksi tingkat emisi karbon dioksida (`CO2EMISSIONS`) dari sebuah kendaraan berdasarkan kapasitas atau ukuran mesinnya (`ENGINESIZE`). Model dievaluasi secara kuantitatif menggunakan metrik *Mean Squared Error* (MSE) dan koefisien determinasi (*R-Squared*).
 
 ---
 
@@ -51,57 +51,79 @@ TUGAS2/
 │
 ├── README.md                     # Dokumentasi repositori
 └── requirements.txt              # Daftar pustaka dependencies
-🗂️ Dataset
+```
+
+---
+
+## 🗂️ Dataset
 Dataset yang digunakan pada Modul 2 bersumber dari IBM Object Storage (Cognitive Class) yang memuat informasi konsumsi bahan bakar dan emisi dari berbagai model kendaraan.
 
-Tautan Unduhan Original: FuelConsumptionCo2.csv
+- **Tautan Unduhan Original:** `FuelConsumptionCo2.csv`
+- **Fitur Utama yang Dianalisis:** `ENGINESIZE` (Fitur/X) dan `CO2EMISSIONS` (Target/Y).
 
-Fitur Utama yang Dianalisis: ENGINESIZE (Fitur/X) dan CO2EMISSIONS (Target/Y).
+---
 
-⚙️ Persiapan & Instalasi
-Pastikan Anda telah menginstal Python 3.8+. Berikut adalah langkah-langkah untuk menjalankan dashboard ini di komputer lokal Anda:
+## ⚙️ Persiapan & Instalasi
+Pastikan Anda telah menginstal **Python 3.8+**. Berikut adalah langkah-langkah untuk menjalankan dashboard ini di komputer lokal Anda:
 
-Clone repositori ini:
+1. **Clone repositori ini:**
+   ```bash
+   git clone <URL-GITHUB-ANDA>
+   cd TUGAS2
+   ```
 
-Bash
-git clone <URL-GITHUB-ANDA>
-cd TUGAS2
-Aktifkan Virtual Environment (Disarankan):
+2. **Aktifkan Virtual Environment (Disarankan):**
+   - **Windows:**
+     ```cmd
+     env\Scripts\activate
+     ```
+   - **Mac/Linux:**
+     ```bash
+     source env/bin/activate
+     ```
 
-Windows: env\Scripts\activate
+3. **Instal dependensi pustaka:**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-Mac/Linux: source env/bin/activate
+---
 
-Instal dependensi pustaka:
+## 🚀 Cara Menjalankan Aplikasi
+Setelah semua pustaka terinstal, jalankan perintah berikut di terminal (pastikan posisi direktori Anda saat ini berada di dalam folder `TUGAS2`):
 
-Bash
-pip install -r requirements.txt
-🚀 Cara Menjalankan Aplikasi
-Setelah semua pustaka terinstal, jalankan perintah berikut di terminal (pastikan posisi direktori Anda saat ini berada di dalam folder TUGAS2):
-
-Bash
+```bash
 streamlit run src/app.py
-Aplikasi dashboard akan terbuka secara otomatis di browser bawaan Anda pada alamat http://localhost:8501.
+```
+Aplikasi dashboard akan terbuka secara otomatis di *browser* bawaan Anda pada alamat `http://localhost:8501`.
 
-📸 Cuplikan Dashboard (Preview)
-Eksperimen 1: Data Sembarang
-Eksperimen 2: Emisi Kendaraan
-🛠️ Teknologi yang Digunakan
-Bahasa Utama: Python
+---
 
-Machine Learning: scikit-learn
+## 📸 Cuplikan Dashboard (Preview)
 
-Manipulasi Data: pandas, numpy
+**Eksperimen 1: Data Sembarang** 
+<img width="2875" height="1649" alt="image" src="https://github.com/user-attachments/assets/6699b76c-2e39-4d96-9e94-dfe36723f206" />
 
-Visualisasi Data: matplotlib
 
-Antarmuka Web (GUI): streamlit
+**Eksperimen 2: Emisi Kendaraan**
+<img width="2878" height="1659" alt="image" src="https://github.com/user-attachments/assets/22323898-fd74-49ae-8be6-73314dc5796b" />
+<img width="2865" height="1662" alt="image" src="https://github.com/user-attachments/assets/34fbdf6f-2fd6-44e3-b90b-0a640fbdbad1" />
 
-📚 Referensi
-Modul Praktikum Pembelajaran Mesin: Mengenal Simple Linear Regression.
 
-Dokumentasi Streamlit
 
-Dokumentasi Scikit-Learn (Linear Models)
+---
 
-Referensi Repositori: Ilham Fauzi - Regresi Linier Sederhana
+## 🛠️ Teknologi yang Digunakan
+- **Bahasa Utama:** Python
+- **Machine Learning:** `scikit-learn`
+- **Manipulasi Data:** `pandas`, `numpy`
+- **Visualisasi Data:** `matplotlib`
+- **Antarmuka Web (GUI):** `streamlit`
+
+---
+
+## 📚 Referensi
+- Modul Praktikum Pembelajaran Mesin: *Mengenal Simple Linear Regression*.
+- [Dokumentasi Streamlit](https://docs.streamlit.io/)
+- [Dokumentasi Scikit-Learn (Linear Models)](https://scikit-learn.org/stable/modules/linear_model.html)
+- Referensi Repositori: Ilham Fauzi - Regresi Linier Sederhana
